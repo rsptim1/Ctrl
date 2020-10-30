@@ -82,15 +82,7 @@ namespace Ctrl
 		public static bool ToggleMouseCursorLockState()
 		{
 			bool result = StrideInputManager.IsMousePositionLocked;
-
-			if (result)
-			{
-				StrideInputManager.UnlockMousePosition();
-			}
-			else
-			{
-				StrideInputManager.LockMousePosition();
-			}
+			SetMouseCursorLockState(!result);
 
 			return !result;
 		}
